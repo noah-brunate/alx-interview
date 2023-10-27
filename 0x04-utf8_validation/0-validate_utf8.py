@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 script defines a function validUTF8(data) that if agiven
 dataset represents a valid UTF-8 encoding.
