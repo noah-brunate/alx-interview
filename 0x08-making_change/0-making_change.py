@@ -17,8 +17,8 @@ def makeChange(coins, total):
         if total <= 0:
             break
         num = total // val
-        total -= num * val
+        total -= (num * val)
         change += num
     if total != 0:
         return -1
-    return num
+    return change
