@@ -11,16 +11,14 @@ def makeChange(coins, total):
     if total <= 0:
         return 0
 
-    num = 0
+    change = 0
     coins.sort(reverse=True)
     for val in coins:
-        if total == 0:
-            return num
-        while val <= total:
-            if total % val == 0:
-                num = num + (total / val)
-                total = 0
-            else:
-                total = total - val
-                num = num + 1
-    return -1
+        if total <= 0:
+            break
+        num = total // val
+        total -= num * val
+        change += num
+    if total != 0:
+        return -1
+    return num
