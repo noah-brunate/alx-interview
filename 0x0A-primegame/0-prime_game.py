@@ -24,6 +24,9 @@ def sieve_of_eratosthenes(n):
 def isWinner(x, nums):
     """function returns a winner of the game"""
 
+    if not nums or x < 1:
+        return None
+
     Maria = 0
     Ben = 0
 
